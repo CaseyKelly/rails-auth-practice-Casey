@@ -8,7 +8,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_student
 
   def authorize
-    redirect_to login_url if current_student.nil?
+    redirect_to login_url, notice: "Not authorized!" if current_student.nil?
   end
+
+  # def authorize_clubs
+  #   redirect_to login_url, notice: "Not authorized for this club!" if current_student.clubs
+  # end
 
 end

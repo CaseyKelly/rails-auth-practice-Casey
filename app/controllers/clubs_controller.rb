@@ -8,7 +8,7 @@ class ClubsController < ApplicationController
   def show
     @club = Club.find(params[:id])
     if not current_student.clubs.include? @club
-      render '/public/403'
+      render '/public/403', status: 403
     end
   end
 

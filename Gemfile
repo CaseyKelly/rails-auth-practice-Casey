@@ -16,6 +16,7 @@ gem 'faker'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'capybara'
   gem 'better_errors'
   gem 'pry-rails'
   gem 'binding_of_caller'

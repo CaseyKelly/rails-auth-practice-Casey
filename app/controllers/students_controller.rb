@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  before_filter :authorize, only: [:index]
 
   def index
     @students = Student.all
